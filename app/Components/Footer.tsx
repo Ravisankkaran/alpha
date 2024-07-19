@@ -200,6 +200,8 @@ function Footer() {
           </p>
         </div>
       </div>
+      <div className="text-center"><p>Copyright ©  <strong> GRIVAS Technologies</strong> . All Rights Reserved</p>
+      <p>Developed By</p></div>
     </>
   );
 }
