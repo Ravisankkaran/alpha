@@ -13,6 +13,8 @@ const videos = [
   { id: "UxF2LF79c8U", title: "Folding gate", desc: "Grivas Technologies" },
   { id: "KlBDVzIKh6I", title: "Complete Auto from Gate", desc: "Grivas Technologies" },
   { id: "XK43Ehdpkwo", title: "Exp Gate", desc: "Grivas Technologies" },
+
+
   // Add more video IDs and titles as needed
 ];
 

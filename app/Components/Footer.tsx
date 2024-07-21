@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+//import Image from "next/image";
 import { useRouter } from "next/navigation"; // Updated import
 import { FaInstagram, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 
@@ -24,12 +24,7 @@ function Footer() {
         <div className="p-5">
           <ul>
             <p className="text-gray-800 font-bold text-3xl pb-6">
-              <Image
-                src="/assets/Logo.svg"
-                alt="Grivas"
-                width={150}
-                height={50}
-              />
+              
             </p>
 
             <div className="flex gap-6 pb-5">
@@ -40,13 +35,7 @@ function Footer() {
               >
                 <FaInstagram className="text-2xl cursor-pointer hover:text-orange-600" />
               </a>
-              <a
-                href="https://www.x.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter className="text-2xl cursor-pointer hover:text-orange-600" />
-              </a>
+             
               <a
                 href="https://www.linkedin.com"
                 target="_blank"
@@ -200,7 +189,7 @@ function Footer() {
           </p>
         </div>
       </div>
-      <div className="text-center"><p>Copyright ©  <strong> GRIVAS Technologies</strong> . All Rights Reserved</p>
+      <div className="text-center"><p>Copyright © 2024 <strong> GRIVAS Technologies</strong> . All Rights Reserved</p>
       <p>Developed By</p></div>
     </>
   );

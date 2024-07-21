@@ -54,7 +54,8 @@ const products: Product[] = [
       img: "/images/img7.jpg",
       description:
       "Introducing Smart Behind Modules: seamless integration for partial home automation with built-in safety features, Wi-Fi connectivity, voice control, and easy installation, elevating your home automation experience effortlessly."
-    }
+    },
+   
   ];
   
   export default products;

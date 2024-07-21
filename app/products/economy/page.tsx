@@ -6,10 +6,18 @@ function Products() {
   return (
     <>
       <div className="py-8 text-center">
-        <h1 className="text-4xl font-bold text-black">Products</h1>
+        <h1 className="text-4xl font-bold text-black">Economy-Products</h1>
       </div>
+      <div className="flex flex-col items-center justify-center min-h-screen text-gray-800">
+      <h1 className="text-4xl font-bold mb-4">Page Under Construction</h1>
+      <p className="mb-6">
+        The page you are looking for is currently under construction. Please check back later.
+      </p>
+      
+    </div>
       <div className="flex min-h-screen items-center justify-center p-5">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+        
           {products.map((product) => (
             <div
               key={product.id}

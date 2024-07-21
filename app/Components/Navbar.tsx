@@ -36,9 +36,12 @@ function Navbar() {
   const router = useRouter();
   const [isSticky, setIsSticky] = useState<boolean>(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState<boolean>(false);
+  const [isSmartHomeDropdownVisible, setIsSmartHomeDropdownVisible] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const smartHomeDropdownRef = useRef<HTMLDivElement>(null);
   let dropdownTimeout: ReturnType<typeof setTimeout>;
+  let smartHomeDropdownTimeout: ReturnType<typeof setTimeout>;
 
   const handleNavLinkClick = (id: string) => {
     if (window.location.pathname === "/") {
@@ -80,21 +83,31 @@ function Navbar() {
     }, 200);
   };
 
+  const handleSmartHomeMouseEnter = () => {
+    clearTimeout(smartHomeDropdownTimeout);
+    setIsSmartHomeDropdownVisible(true);
+  };
+
+  const handleSmartHomeMouseLeave = () => {
+    smartHomeDropdownTimeout = setTimeout(() => {
+      setIsSmartHomeDropdownVisible(false);
+    }, 200);
+  };
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <div
-      className={`bg-blue-50 border-b ${isSticky ? "sticky top-0 z-50" : ""}`}
-    >
+    <div className={`bg-blue-50 border-b ${isSticky ? "sticky top-0 z-50" : ""}`}>
       <nav className="flex items-center space-x-10 lg:container lg:mx-auto lg:px-20">
         <div className="flex w-full items-center justify-between px-[20px] py-[25px]">
           <div>
             <Image className="lg:hidden md:hidden" src={Logo} alt="Logo" />
             <span className="hidden lg:block md:block text-[28px] text-[#3056a8] font-bold">
-              GRIVAS <br />
-              <p className=" text-black text-lg font-normal">
+              GRIVAS
+              <br />
+              <p className="text-black text-lg font-normal">
                 {" "}
                 &quot;Smart Solutions, Safer Spaces.&quot;
               </p>
@@ -122,12 +135,37 @@ function Navbar() {
                       ref={dropdownRef}
                       className="absolute top-full mt-2 bg-blue-50 shadow-md rounded-lg z-50"
                     >
-                      <Link
-                        href="/products"
-                        className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
+                      <div
+                        className="relative"
+                        onMouseEnter={handleSmartHomeMouseEnter}
+                        onMouseLeave={handleSmartHomeMouseLeave}
                       >
-                        Smart-Home
-                      </Link>
+                        <Link
+                          href="#"
+                          className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
+                        >
+                          Smart-Home
+                        </Link>
+                        {isSmartHomeDropdownVisible && (
+                          <div
+                            ref={smartHomeDropdownRef}
+                            className="absolute left-full top-0 mt-2 ml-2 bg-blue-50 shadow-md rounded-lg z-50"
+                          >
+                            <Link
+                              href="/products/economy"
+                              className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
+                            >
+                              Economy
+                            </Link>
+                            <Link
+                              href="/products/luxury"
+                              className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
+                            >
+                              Luxury
+                            </Link>
+                          </div>
+                        )}
+                      </div>
                       <Link
                         href="/school-guard"
                         className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
@@ -226,13 +264,31 @@ function Navbar() {
                       {item.name}
                     </a>
                     <div className="pl-4 mt-2">
-                      <Link
-                        href="/products"
-                        className="block text-[20px] hover:bg-gray-200"
-                        onClick={toggleMobileMenu}
-                      >
-                        Smart-Home
-                      </Link>
+                      <div className="relative">
+                        <Link
+                          href="#"
+                          className="block text-[20px] hover:bg-gray-200"
+                          onClick={toggleMobileMenu}
+                        >
+                          Smart-Home
+                        </Link>
+                        <div className="pl-4 mt-2">
+                          <Link
+                            href="/products/economy"
+                            className="block text-[20px] hover:bg-gray-200"
+                            onClick={toggleMobileMenu}
+                          >
+                            Economy
+                          </Link>
+                          <Link
+                            href="/products/luxury"
+                            className="block text-[20px] hover:bg-gray-200"
+                            onClick={toggleMobileMenu}
+                          >
+                            Luxury
+                          </Link>
+                        </div>
+                      </div>
                       <Link
                         href="/school-guard"
                         className="block text-[20px] hover:bg-gray-200"
