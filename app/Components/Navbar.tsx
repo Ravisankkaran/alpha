@@ -30,6 +30,8 @@ const navLinks: NavLink[] = [
   { name: "Solutions", id: "solution-section", icon: faWrench },
   { name: "Testimony", id: "testimony-section", icon: faComments },
   { name: "Resources", id: "resources-section", icon: faBook },
+  { name: "Gallery", id: "gallery-section", icon: faBook },
+
 ];
 
 function Navbar() {
@@ -144,7 +146,7 @@ function Navbar() {
                           href="#"
                           className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
                         >
-                          Smart-Home
+                           SmartHome Automation
                         </Link>
                         {isSmartHomeDropdownVisible && (
                           <div
@@ -155,13 +157,13 @@ function Navbar() {
                               href="/products/economy"
                               className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
                             >
-                              Economy
+                              Economy series 
                             </Link>
                             <Link
                               href="/products/luxury"
                               className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
                             >
-                              Luxury
+                              Premium series
                             </Link>
                           </div>
                         )}
@@ -178,6 +180,15 @@ function Navbar() {
               ) : item.name === "Resources" ? (
                 <Link
                   href="/resource"
+                  key={index}
+                  className="font-normal text-[18px] link-underline"
+                >
+                  {item.name}
+                </Link>
+              )
+              : item.name === "Gallery" ? (
+                <Link
+                  href="/gallery"
                   key={index}
                   className="font-normal text-[18px] link-underline"
                 >
@@ -270,7 +281,7 @@ function Navbar() {
                           className="block text-[20px] hover:bg-gray-200"
                           onClick={toggleMobileMenu}
                         >
-                          Smart-Home
+                           SmartHome Automation
                         </Link>
                         <div className="pl-4 mt-2">
                           <Link
@@ -301,6 +312,16 @@ function Navbar() {
                 ) : item.name === "Resources" ? (
                   <Link
                     href="/resource"
+                    className="font-normal text-[20px] hover:bg-gray-200 block"
+                    onClick={toggleMobileMenu}
+                  >
+                    <FontAwesomeIcon icon={item.icon} className="mr-2" />
+                    {item.name}
+                  </Link>
+                )
+                : item.name === "Gallery" ? (
+                  <Link
+                    href="/gallery"
                     className="font-normal text-[20px] hover:bg-gray-200 block"
                     onClick={toggleMobileMenu}
                   >

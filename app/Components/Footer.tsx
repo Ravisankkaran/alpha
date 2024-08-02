@@ -176,6 +176,7 @@ function Footer() {
             <span className="text-gray-800 font-semibold text-l mb-4">
               Email :
             </span>{" "}
+            sales@grivas.in,<br/>
             grivas.techno@gmail.com
           </p>
           <p className="text-gray-800 font-bold text-2xl mb-4">Office</p>
