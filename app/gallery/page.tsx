@@ -3,16 +3,16 @@ import Image from "next/image";
 import { FaDownload, FaPlayCircle } from "react-icons/fa"; // Import the play button icon from react-icons
 
 const videos = [
-  { id: "IcxXIz5co_0", title: "Home Automation", desc: "Grivas intro video" },
+  // { id: "IcxXIz5co_0", title: "Home Automation", desc: "Grivas intro video" },
   { id: "fJrna6Lqz_M", title: "Folding roof sitout ", desc: "Grivas Technologies" },
   { id: "fsNdg7EK898", title: "Slide gate installation ", desc: "Grivas Technologies" },
-  { id: "8A01u8PUsnI", title: "Smart Curtain", desc: "Grivas Technologies" },
+  // { id: "8A01u8PUsnI", title: "Smart Curtain", desc: "Grivas Technologies" },
   { id: "8sPxEEOpsp8", title: "Flip Sitout", desc: "Grivas Technologies" },
   { id: "sowveo8gZ6U", title: "Swing gate site", desc: "Grivas Technologies" },
   { id: "9wpVM6YaTmA", title: "Top Ceiling", desc: "Grivas Technologies" },
   { id: "UxF2LF79c8U", title: "Folding gate", desc: "Grivas Technologies" },
-  { id: "KlBDVzIKh6I", title: "Complete Auto from Gate", desc: "Grivas Technologies" },
-  { id: "XK43Ehdpkwo", title: "Exp Gate", desc: "Grivas Technologies" },
+  // { id: "KlBDVzIKh6I", title: "Complete Auto from Gate", desc: "Grivas Technologies" },
+  // { id: "XK43Ehdpkwo", title: "Exp Gate", desc: "Grivas Technologies" },
 
 
   // Add more video IDs and titles as needed

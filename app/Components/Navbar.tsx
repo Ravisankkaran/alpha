@@ -116,7 +116,7 @@ function Navbar() {
             </span>
           </div>
 
-          <div className="hidden lg:flex md:flex gap-x-[35px]">
+          <div className="hidden lg:flex md:flex   gap-x-[35px]">
             {navLinks.map((item, index) =>
               item.name === "Solutions" ? (
                 <div
@@ -127,7 +127,7 @@ function Navbar() {
                 >
                   <a
                     href="#"
-                    className="font-normal text-[18px] link-underline"
+                    className="font-normal text-[16px] link-underline"
                     onClick={() => handleNavLinkClick(item.id)}
                   >
                     {item.name}
@@ -144,7 +144,7 @@ function Navbar() {
                       >
                         <Link
                           href="#"
-                          className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
+                          className="block px-4 py-2 text-[16px] whitespace-nowrap hover:bg-gray-200"
                         >
                            SmartHome Automation
                         </Link>
@@ -155,13 +155,13 @@ function Navbar() {
                           >
                             <Link
                               href="/products/economy"
-                              className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
+                              className="block px-4 py-2 text-[16px] whitespace-nowrap hover:bg-gray-200"
                             >
                               Economy series 
                             </Link>
                             <Link
                               href="/products/luxury"
-                              className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
+                              className="block px-4 py-2 text-[16px] whitespace-nowrap hover:bg-gray-200"
                             >
                               Premium series
                             </Link>
@@ -170,7 +170,7 @@ function Navbar() {
                       </div>
                       <Link
                         href="/school-guard"
-                        className="block px-4 py-2 text-[18px] whitespace-nowrap hover:bg-gray-200"
+                        className="block px-4 py-2 text-[16px] whitespace-nowrap hover:bg-gray-200"
                       >
                         School-Guard
                       </Link>
@@ -181,7 +181,7 @@ function Navbar() {
                 <Link
                   href="/resource"
                   key={index}
-                  className="font-normal text-[18px] link-underline"
+                  className="font-normal text-[16px] link-underline"
                 >
                   {item.name}
                 </Link>
@@ -190,7 +190,7 @@ function Navbar() {
                 <Link
                   href="/gallery"
                   key={index}
-                  className="font-normal text-[18px] link-underline"
+                  className="font-normal text-[16px] link-underline"
                 >
                   {item.name}
                 </Link>
@@ -198,14 +198,14 @@ function Navbar() {
                 <Link
                   href="/about"
                   key={index}
-                  className="font-normal text-[18px] link-underline"
+                  className="font-normal text-[16px] link-underline"
                 >
                   {item.name}
                 </Link>
               ) : (
                 <a
                   href="#"
-                  className="font-normal text-[18px] link-underline"
+                  className="font-normal text-[16px] link-underline"
                   key={index}
                   onClick={() => handleNavLinkClick(item.id)}
                 >
@@ -268,7 +268,7 @@ function Navbar() {
                   <div className="relative">
                     <a
                       href="#"
-                      className="font-normal text-[20px] hover:bg-gray-200 block"
+                      className="font-normal text-[16px] hover:bg-gray-200 block"
                       onClick={() => handleNavLinkClick(item.id)}
                     >
                       <FontAwesomeIcon icon={item.icon} className="mr-2" />
@@ -278,7 +278,7 @@ function Navbar() {
                       <div className="relative">
                         <Link
                           href="#"
-                          className="block text-[20px] hover:bg-gray-200"
+                          className="block text-[16px] hover:bg-gray-200"
                           onClick={toggleMobileMenu}
                         >
                            SmartHome Automation
@@ -286,14 +286,14 @@ function Navbar() {
                         <div className="pl-4 mt-2">
                           <Link
                             href="/products/economy"
-                            className="block text-[20px] hover:bg-gray-200"
+                            className="block text-[16px] hover:bg-gray-200"
                             onClick={toggleMobileMenu}
                           >
                             Economy
                           </Link>
                           <Link
                             href="/products/luxury"
-                            className="block text-[20px] hover:bg-gray-200"
+                            className="block text-[16px] hover:bg-gray-200"
                             onClick={toggleMobileMenu}
                           >
                             Luxury
@@ -302,7 +302,7 @@ function Navbar() {
                       </div>
                       <Link
                         href="/school-guard"
-                        className="block text-[20px] hover:bg-gray-200"
+                        className="block text-[16px] hover:bg-gray-200"
                         onClick={toggleMobileMenu}
                       >
                         School-Guard
@@ -312,7 +312,7 @@ function Navbar() {
                 ) : item.name === "Resources" ? (
                   <Link
                     href="/resource"
-                    className="font-normal text-[20px] hover:bg-gray-200 block"
+                    className="font-normal text-[16px] hover:bg-gray-200 block"
                     onClick={toggleMobileMenu}
                   >
                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
@@ -322,7 +322,7 @@ function Navbar() {
                 : item.name === "Gallery" ? (
                   <Link
                     href="/gallery"
-                    className="font-normal text-[20px] hover:bg-gray-200 block"
+                    className="font-normal text-[16px] hover:bg-gray-200 block"
                     onClick={toggleMobileMenu}
                   >
                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
@@ -331,7 +331,7 @@ function Navbar() {
                 ) : item.name === "About" ? (
                   <Link
                     href="/about"
-                    className="font-normal text-[20px] hover:bg-gray-200 block"
+                    className="font-normal text-[16px] hover:bg-gray-200 block"
                     onClick={toggleMobileMenu}
                   >
                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
@@ -340,7 +340,7 @@ function Navbar() {
                 ) : (
                   <a
                     href="#"
-                    className="font-normal text-[20px] hover:bg-gray-200 block"
+                    className="font-normal text-[16px] hover:bg-gray-200 block"
                     onClick={() => handleNavLinkClick(item.id)}
                   >
                     <FontAwesomeIcon icon={item.icon} className="mr-2" />
